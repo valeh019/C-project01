@@ -1,0 +1,64 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Get the exam score from the user
+        Console.Write("Enter the exam score (between 0 and 100): ");
+        float examScore;
+
+        if (float.TryParse(Console.ReadLine(), out examScore))
+        {
+            // Check if the score is within the valid range
+            if (examScore >= 0 && examScore <= 100)
+            {
+                // Determine the grade based on the score
+                if (examScore >= 91 && examScore <= 100)
+                {
+                    Console.WriteLine("A");
+                }
+                else if (examScore >= 81 && examScore <= 90)
+                {
+                    Console.WriteLine("B");
+                }
+                else if (examScore >= 71 && examScore <= 80)
+                {
+                    Console.WriteLine("C");
+                }
+                else if (examScore >= 61 && examScore <= 70)
+                {
+                    Console.WriteLine("D");
+                }
+                else if (examScore >= 51 && examScore <= 60)
+                {
+                    Console.WriteLine("E");
+                }
+                else
+                {
+                    Console.WriteLine(examScore);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid score. Please enter a score between 0 and 100.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid number.");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
